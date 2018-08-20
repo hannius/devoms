@@ -19,7 +19,8 @@ class SaltAPI(object):
     def __init__(self,url,username,password):
         self.__url = url.rstrip('/')
         self.__user = 'saltapi'
-        self.__password = 'VQupaKQv_aZfCz6'
+        #self.__password = 'VQupaKQv_aZfCz6' #for old
+        self.__password = 'saltapi'
 
     def token_id(self):
         ''' user login and get token id '''
@@ -223,7 +224,7 @@ class SaltAPI(object):
         return ret
 
 def main():
-    sapi = SaltAPI(url='https://localhost:17821',username='saltapi',password='VQupaKQv_aZfCz6')
+    sapi = SaltAPI(url='https://localhost:17821',username='saltapi',password='saltapi')
 
 if __name__ == '__main__':
     main()
