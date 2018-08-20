@@ -1,2 +1,2 @@
 # devoms
-for Paper of devoms
+for thesis of devoms
