@@ -1236,7 +1236,7 @@ def project_deploy(request):
                                password=settings.SALT_API['password'])
                 dtime = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
                 ret = sapi.file_copy(tgt_list, 'cp.get_file', 'salt://rsync/%s.list' % project.name,
-                                       '/srv/salt/%s.list' % project.name, 'nodegroup')
+                                       '/data/salt/base/%s.list' % project.name, 'nodegroup')
                 if request.GET.has_key('init'):
                     action = u'初始化项目'
                     ret = sapi.project_manage(tgt_list, 'project_manage.ProjectSync', project.name,

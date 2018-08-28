@@ -32,7 +32,7 @@ def md5sum(fname):
     return m.hexdigest()
 
 def Backup(dest, tag, md5):
-    bkpath = os.path.join('/srv/salt', '%s-%s'%(dest.lstrip('/'),tag))
+    bkpath = os.path.join('/data/salt/base', '%s-%s'%(dest.lstrip('/'),tag))
     if not os.path.isdir(os.path.dirname(bkpath)):
         os.makedirs(os.path.dirname(bkpath))
     try:
@@ -46,6 +46,6 @@ def Backup(dest, tag, md5):
         return None
 
 def Rollback(dest, tag, md5):
-    bkpath = os.path.join('/srv/salt', '%s-%s'%(dest.lstrip('/'), tag))
+    bkpath = os.path.join('/data/salt/base', '%s-%s'%(dest.lstrip('/'), tag))
     shutil.copyfile(bkpath, dest)
     return 'ok'
