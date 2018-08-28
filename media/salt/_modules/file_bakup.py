@@ -31,7 +31,7 @@ def md5sum(fname):
         return ""
     return m.hexdigest()
 
-#-----for update salt fileroots-----
+#-----1111for update salt fileroots1111-----
 def Backup(dest, tag, md5):
     bkpath = os.path.join('/data/salt/base', '%s-%s'%(dest.lstrip('/'),tag))
     if not os.path.isdir(os.path.dirname(bkpath)):
